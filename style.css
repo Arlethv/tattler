@@ -1,0 +1,26 @@
+header.encabezado {
+    position: relative;
+    background-color: #343a40;
+    background: url("https://images.unsplash.com/photo-1587899897263-ae5325c1c041?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2111&q=80") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+
+.beneficios {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+}
+.beneficios .beneficios-item {
+  max-width: 20rem;
+}
+.beneficios .beneficios-item .beneficios-icon {
+  height: 7rem;
+}
+.beneficios .beneficios-item .beneficios-icon i {
+  font-size: 3.5rem;
+}
+
+
