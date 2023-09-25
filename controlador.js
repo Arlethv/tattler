@@ -1,26 +1,29 @@
+/**
+ * @description Este archivo define las rutas de la API relacionadas con el modelo MVC.
+ * @author {Yoselyn}
+ */
+
 const express = require('express');
-const ruta = express.Router();
-const Restaurante = require('./modelo');
+const rutaApi = express.Router();
+const modelo = require('./modelo');
 
-ruta.post('/modelo', async (req, res) => {
+
+
+/**
+ * @route GET /api/restaurantes
+ * @description Ruta para obtener todos los restaurantes.
+ * @param {Object} req objeto de solicitud HTTP.
+ * @param {Object} res objeto de respuesta HTTP.
+ */
+rutaApi.get('/tattler', async (req, res) => {
   try {
-    const nuevoRestaurante = new Restaurante(req.body);
-    await nuevoRestaurante.save();
-    res.status(201).json(nuevoRestaurante);
+    const coleccion = await modelo.getRestaurantes();
+    const restaurantes = await coleccion.find({}).toArray();
+    res.json(restaurantes);
   } catch (error) {
-    res.status(500).json({ error: 'Error al crear el restaurante' });
+    console.error('Error al obtener los datos de restaurantes:', error);
+    res.status(500).json({ error: 'Error en del servidor' });
   }
 });
 
-
-ruta.get('/modelo', async (req, res) => {
-  try {
-    const restaurantes = await Restaurante.find();
-    res.status(200).json(restaurantes);
-  } catch (error) {
-    res.status(500).json({ error: 'Error al obtener los restaurantes' });
-  }
-});
-
-
-module.exports = ruta;
+module.exports =rutaApi;
