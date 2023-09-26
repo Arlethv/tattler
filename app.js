@@ -1,6 +1,7 @@
 /**
  * Define una aplicación Express que utiliza un controlador para manejar rutas API.
  * @author {Yoselyn}
+ * @version 1.0
  */
 
 const express = require('express');

@@ -1,6 +1,7 @@
 /**
  * @description Este archivo define las rutas de la API relacionadas con el modelo MVC.
  * @author {Yoselyn}
+ * @version 1.0
  */
 
 const express = require('express');

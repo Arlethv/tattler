@@ -1,6 +1,7 @@
 /**
  * Este módulo proporciona funciones relacionadas con la obtención de restaurantes desde MongoDB.
  * @author {Yoselyn}
+ * @version 1.0
  */
 
 const { MongoClient } = require('mongodb');
